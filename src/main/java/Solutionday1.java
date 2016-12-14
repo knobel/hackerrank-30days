@@ -12,6 +12,7 @@ public class Solutionday1 {
     String s = "HackerRank ";
 
     Scanner scan = new Scanner(System.in);
+    scan.useDelimiter(Pattern.compile("[\\r\\n;]+"));
 
      /* Declare second integer, double, and String variables. */
     int j;
@@ -21,8 +22,8 @@ public class Solutionday1 {
         /* Read and save an integer, double, and String to your variables.*/
     j = scan.nextInt();
     e = scan.nextDouble();
-    //scan.next();
-    t = scan.next() + scan.nextLine();
+    //t = scan.next() + scan.nextLine();
+    t = scan.next();
 
         /* Print the sum of both integer variables on a new line. */
     System.out.println(i + j);
