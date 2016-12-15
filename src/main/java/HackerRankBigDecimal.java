@@ -25,10 +25,6 @@ public class HackerRankBigDecimal {
 
       String string;
 
-      public MyBigDecimal(char[] in, int offset, int len) {
-        super(in, offset, len);
-      }
-
       public MyBigDecimal(String s) {
         super(s);
         string = s;
