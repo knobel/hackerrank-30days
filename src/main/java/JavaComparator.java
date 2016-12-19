@@ -1,3 +1,4 @@
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
@@ -8,7 +9,7 @@ import java.util.Scanner;
 public class JavaComparator {
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in, "UTF-8");
         int n = scan.nextInt();
 
         Player[] player = new Player[n];
@@ -21,13 +22,13 @@ public class JavaComparator {
 
         Arrays.sort(player, checker);
         for(int i = 0; i < player.length; i++){
-            System.out.printf("%s %s\n", player[i].name, player[i].score);
+            System.out.printf("%s %s%n", player[i].name, player[i].score);
         }
     }
 
 }
 
-class Checker implements Comparator<Player> {
+class Checker implements Comparator<Player>, Serializable {
     public int compare(Player o1,  Player o2) {
         if (o1.score < o2.score)
             return 1;
